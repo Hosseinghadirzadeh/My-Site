@@ -22,11 +22,11 @@ li {
 
 .bt, header,
 main,
-footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu, .mobileMenu ul, .mobileMenu ul > li, main .row1 > div > div > section:nth-of-type(1) .coder, main .row1 .moving {
+footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu, .mobileMenu ul, .mobileMenu ul > li, main .row1 > div > div > section:nth-of-type(1) .coder, main .row1 .moving, .row2 > div > div > * {
   border: 1px solid red;
 }
 
-.df, main .row1 .moving {
+.df, main .row1 .moving, .row2 > div > div > div:nth-of-type(1), .row2 > div > div > div:nth-of-type(1) > figure, .row2 > div > div > div:nth-of-type(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,8 +133,8 @@ header > nav > ul > li > a > i {
 
 .mobileMenu {
   z-index: 99;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   position: fixed;
   right: 0;
   top: 10px;
@@ -143,6 +143,7 @@ header > nav > ul > li > a > i {
   transition: all 0.4s;
   background-color: #151931;
   border-radius: 5px;
+  padding: 0;
 }
 
 .mobileMenu:hover > ul {
@@ -158,8 +159,8 @@ header > nav > ul > li > a > i {
 }
 
 .mobileMenu:hover > div > span:nth-of-type(1) {
-  -webkit-transform: rotate(41deg);
-          transform: rotate(41deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .mobileMenu:hover > div > span:nth-of-type(2) {
@@ -167,8 +168,8 @@ header > nav > ul > li > a > i {
 }
 
 .mobileMenu:hover > div > span:nth-of-type(3) {
-  -webkit-transform: rotate(-41deg);
-          transform: rotate(-41deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .mobileMenu > div {
@@ -192,7 +193,7 @@ header > nav > ul > li > a > i {
   display: block;
   height: 3px;
   background-color: #f9ca21;
-  width: 90%;
+  width: 80%;
   border-radius: 50px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -260,7 +261,7 @@ main {
 main .row1 {
   width: 100%;
   border: 2px solid black;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-image: url(../img/hosseinrow1.jpg);
   background-repeat: no-repeat;
@@ -269,11 +270,11 @@ main .row1 {
 }
 
 main .row1 > div {
-  height: 100%;
+  min-height: 100vh;
 }
 
 main .row1 > div > div {
-  height: 100%;
+  min-height: 100vh;
 }
 
 main .row1 > div > div > section:nth-of-type(1) {
@@ -387,7 +388,7 @@ main .row1 > div > div > section:nth-of-type(2) > .social_media > li > a:hover {
 
 main .row1 .moving {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   width: 40px;
   height: 40px;
   left: 50%;
@@ -400,11 +401,12 @@ main .row1 .moving > i {
   color: #f9ca21;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  z-index: 9;
 }
 
 main .row1 .moving > i:nth-of-type(3) {
-  -webkit-animation: moving3 1s .9s infinite alternate;
-          animation: moving3 1s .9s infinite alternate;
+  -webkit-animation: moving3 1s 0.9s infinite alternate;
+          animation: moving3 1s 0.9s infinite alternate;
   top: -20px;
   opacity: 0.5;
 }
@@ -515,6 +517,83 @@ main .row1 .moving > i:nth-of-type(1) {
   }
   100% {
     top: -10px;
+  }
+}
+
+.row2 {
+  width: 100%;
+  background-color: #fcfcfd;
+}
+
+.row2 > div > div {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.row2 > div > div > div:nth-of-type(1) {
+  min-height: 400px;
+  border: 1px solid black;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.row2 > div > div > div:nth-of-type(1) > figure {
+  width: 100%;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.row2 > div > div > div:nth-of-type(1) > figure > img {
+  width: 80%;
+  border-radius: 10px;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  -webkit-transform: translate(0, 0px);
+          transform: translate(0, 0px);
+  -webkit-animation: 2s pMovment infinite alternate;
+          animation: 2s pMovment infinite alternate;
+}
+
+.row2 > div > div > div:nth-of-type(1) > figure > img:hover {
+  -webkit-filter: grayscale(2);
+          filter: grayscale(2);
+}
+
+.row2 > div > div > div:nth-of-type(2) {
+  min-height: 400px;
+  border: 1px solid black;
+  padding: 20px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.row2 > div > div > div:nth-of-type(2) > ul {
+  padding-left: 0;
+}
+
+.row2 > div > div > div:nth-of-type(2) > ul > li {
+  padding: 10px;
+  font-size: .8rem;
+}
+
+.row2 > div > div > div:nth-of-type(2) > ul > li > i {
+  font-size: 1rem;
+  color: #f9ca21;
+  padding-right: 20px;
+}
+
+@-webkit-keyframes pMovment {
+  to {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+  }
+}
+
+@keyframes pMovment {
+  to {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
   }
 }
 /*# sourceMappingURL=style.css.map */
