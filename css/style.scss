@@ -28,6 +28,12 @@ $flag: 1;
         border: none;
     }
 }
+.df {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 header,
 main,
 footer {
@@ -108,6 +114,7 @@ header {
     }
 }
 .mobileMenu {
+    z-index: 99;
     width: 80px;
     height: 80px;
     @extend .bt;
@@ -173,7 +180,7 @@ header {
         overflow: hidden;
         @extend .bt;
         padding: 0;
-        border-radius: 5px;
+        border-radius: 20px 0 0 0px;
         // background-color: beige;
         padding-top: 5%;
         > li {
@@ -206,8 +213,176 @@ header {
 main {
     height: 600vh;
     background-image: linear-gradient(45deg, red, blue);
-    .row1{
-        background-image: url();
+    .row1 {
+        width: 100%;
+        border: 2px solid black;
+        height: 100vh;
+        position: relative;
+        background-image: url(../img/hosseinrow1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100%;
+        > div {
+            height: 100%;
+            > div {
+                height: 100%;
+                > section:nth-of-type(1) {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    padding-top: 40px;
+                    h1 {
+                        color: white;
+                        > strong {
+                            color: $yellow;
+                        }
+                    }
+                    .coder {
+                        position: relative;
+                        width: 100%;
+                        @extend .bt;
+                        height: 30px;
+                        margin: 10px 0;
+                        > p {
+                            position: absolute;
+                            color: white;
+                            font-size: 20px;
+                            transition: all 0.6s;
+                            overflow: hidden;
+                            width: 0%;
+                            height: 30px;
+                            word-break: break-all;
+                            > span {
+                                font-size: 15px;
+                                transition: all 0.4s;
+                                opacity: 0;
+                                animation: caret 0.7s infinite;
+                                padding-left: 3px;
+                            }
+                            &:nth-of-type(1) {
+                                animation: 5s coding infinite;
+                            }
+                        }
+                    }
+                    > p {
+                        color: $gray;
+                        font-size: 20px;
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+                    > .btn {
+                        background-color: $yellow;
+                        color: $blue;
+                        font-size: 18px;
+                        transition: all 0.4s;
+                        &:hover {
+                            letter-spacing: 1px;
+                            color: white;
+                            box-shadow: 0 10px 10px 1px rgb(33, 39, 78);
+                        }
+                    }
+                }
+                > section:nth-of-type(2) {
+                    > .social_media {
+                        padding-left: 0;
+                        display: flex;
+                        justify-content: flex-start;
+                        margin-top: 30px;
 
+                        > li {
+                            margin-right: 10px;
+                            > a {
+                                font-size: 30px;
+                                color: rgb(195, 200, 255);
+                                border: 1px solid rgb(195, 200, 255);
+                                padding: 6px;
+                                border-radius: 5px;
+                                transition: all 0.4s;
+                                &:hover {
+                                    border-radius: 50%;
+                                    color: $yellow;
+                                    border: 1px solid $yellow;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .moving {
+            position: absolute;
+            bottom: 0;
+            @extend .bt, .df;
+            width: 40px;
+            height: 40px;
+            left: 50%;
+
+            > i {
+                position: absolute;
+                font-size: 40px;
+                font-weight: bolder;
+                color: $yellow;
+                transition: all 0.4s;
+                &:nth-of-type(3) {
+                    animation: moving3 1s .9s infinite alternate;
+                    top: -20px;
+                    opacity: 0.5;
+                }
+                &:nth-of-type(2) {
+                    animation: moving2 1s 0.5s infinite alternate;
+                    top: -10px;
+                    opacity: 0.8;
+                }
+                &:nth-of-type(1) {
+                    animation: moving1 1s infinite alternate;
+                    top: 0px;
+                }
+            }
+        }
     }
+}
+@keyframes coding {
+    80% {
+        width: 100%;
+    }
+    90% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+@keyframes caret {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes moving1 {
+    90% {
+        top: 7px;
+    }
+    100% {
+        top: 7px;
+    }
+}
+@keyframes moving2 {
+    90% {
+        top: -5px;
+    }
+    100% {
+        top: -5px;
+    }
+}
+@keyframes moving3 {
+    90% {
+        top: -10px;
+    }
+  100% {
+        top: -10px;
+    }
+
 }
