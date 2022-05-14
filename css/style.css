@@ -9,7 +9,6 @@ a,
 a:active,
 a:visited {
   text-decoration: none;
-  color: inherit;
 }
 
 body {
@@ -17,7 +16,113 @@ body {
   font-size: 100%;
 }
 
-.bt {
+li {
+  list-style-type: none;
+}
+
+.bt, header,
+main,
+footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu {
   border: 1px solid red;
+}
+
+header {
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #21f933;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header .logo {
+  height: 35%;
+}
+
+header .logo > figure {
+  height: 80%;
+  margin: 0;
+}
+
+header .logo > figure > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .logo > p {
+  background-color: #f9ca21;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+
+header > nav {
+  height: 70%;
+  background-color: #151931;
+}
+
+header > nav > ul {
+  width: 100%;
+  height: 80%;
+  overflow: scroll;
+  padding: 0;
+  padding-top: 5%;
+}
+
+header > nav > ul::-webkit-scrollbar {
+  display: none;
+}
+
+header > nav > ul > li {
+  width: 100%;
+}
+
+header > nav > ul > li:hover > a, header > nav > ul > li:hover > a > i {
+  color: #f9ca21;
+}
+
+header > nav > ul > li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  padding: 5% 0 5% 20%;
+  color: white;
+  font-size: 1rem;
+}
+
+header > nav > ul > li > a > i {
+  margin: 0 10px;
+  font-size: 1rem;
+  color: white;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.mobileMenu {
+  width: 100px;
+  height: 100px;
+}
+
+main {
+  height: 600vh;
+  background-color: blue;
 }
 /*# sourceMappingURL=style.css.map */

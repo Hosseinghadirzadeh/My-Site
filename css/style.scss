@@ -1,3 +1,8 @@
+$blue: rgb(21, 25, 49);
+$yellow: #f9ca21;
+$gray: rgb(247, 247, 247);
+$text: rgb(70, 67, 94);
+
 * {
     padding: 0;
     margin: 0;
@@ -7,11 +12,13 @@ a,
 a:active,
 a:visited {
     text-decoration: none;
-    color: inherit;
 }
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 100%;
+}
+li {
+    list-style-type: none;
 }
 $flag: 1;
 .bt {
@@ -20,4 +27,92 @@ $flag: 1;
     } @else {
         border: none;
     }
+}
+header,
+main,
+footer {
+    @extend .bt;
+}
+
+header {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: #21f933;
+    flex-wrap: wrap;
+    .logo {
+        @extend .bt;
+        height: 35%;
+
+        > figure {
+            height: 80%;
+            @extend .bt;
+            margin: 0;
+            // overflow: hidden;
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        > p {
+            background-color: $yellow;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+        }
+    }
+    > nav {
+        height: 70%;
+        background-color: $blue;
+
+        > ul {
+            width: 100%;
+           height:80%;
+           overflow: scroll;
+           &::-webkit-scrollbar{
+               display: none;
+           }
+            @extend .bt;
+            padding: 0;
+            // background-color: beige;
+            padding-top: 5%;
+            > li {
+                @extend .bt;
+                width: 100%;
+                
+                &:hover>a,&:hover>a>i{
+                   color: $yellow;
+                }
+                > a {
+                    > i {
+                        margin: 0 10px;
+                        font-size: 1rem;
+                        color: white;
+                        transition: all 0.4s;
+                    }
+                    display: flex;
+                    justify-content: flex-start;
+                    width: 100%;
+                    height: 100%;
+          transition: all 0.4s;
+                    padding: 5% 0 5% 20%;
+                    color: white;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+.mobileMenu{
+    width: 100px;
+    height: 100px;
+    @extend .bt;
+    
+}
+main {
+    height: 600vh;
+    background-color: blue;
 }
