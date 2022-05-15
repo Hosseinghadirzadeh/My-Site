@@ -20,7 +20,7 @@ body {
 li {
     list-style-type: none;
 }
-$flag: 1;
+$flag: 11;
 .bt {
     @if ($flag==1) {
         border: 1px solid red;
@@ -33,6 +33,9 @@ $flag: 1;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+.font {
+    font-family: "Roboto", sans-serif;
 }
 header,
 main,
@@ -391,13 +394,14 @@ main {
 }
 .row2 {
     width: 100%;
-    background-color: rgb(252, 252, 253);
+    background-color: rgb(255, 255, 255);
     > div {
         > div {
             align-content: flex-start;
+
             > div:nth-of-type(1) {
                 min-height: 400px;
-                border: 1px solid black;
+                // border: 1px solid black;
                 @extend .df;
                 align-items: flex-start;
                 > figure {
@@ -421,17 +425,21 @@ main {
             }
             > div:nth-of-type(2) {
                 min-height: 400px;
-                border: 1px solid black;
-                padding: 20px ;
+                // border: 1px solid black;
+                padding: 20px;
                 @extend .df;
                 align-content: center;
+                > h2 {
+                    color: rgb(206, 206, 236);
+                    font-size: 50px;
+                }
                 > ul {
                     padding-left: 0;
-      
-                    > li {
 
+                    > li {
                         padding: 10px;
-                        font-size: .8rem;
+                        font-size: 1rem;
+                        font-weight: bold;
                         > i {
                             font-size: 1rem;
                             color: $yellow;
@@ -440,6 +448,48 @@ main {
                     }
                 }
             }
+            > ul {
+                // background-color: blue;
+                @extend .df;
+                padding: 20px;
+                > li {
+                    // margin: 20px 0px;
+                    @extend .bt;
+                    background-color: white;
+                    border-radius: 20px;
+                    padding: 10px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    box-shadow: 0 0 10px 0px black;
+
+                    > i {
+                        width: 30%;
+                        font-size: 50px;
+                        color: $yellow;
+                        text-align: center;
+                    }
+                    > section {
+                        width: 70%;
+                        @extend .df;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        height: 80px;
+                        // background-color: #21f933;
+                        > * {
+                            @extend .bt;
+                            width: 100%;
+                            margin-bottom: 0;
+                            padding-left: 10px;
+                        }
+                    }
+                    > * {
+                        @extend .bt;
+                    }
+                }
+            }
+
             > * {
                 @extend .bt;
             }
@@ -451,4 +501,103 @@ main {
     to {
         transform: translate(0, 20px);
     }
+}
+.row3 {
+    background-color: rgb(247, 247, 247);
+    min-height: 1000px;
+    width: 100%;
+    > div {
+        div {
+            > section {
+                padding: 20px;
+                > * {
+                    @extend .bt;
+                    text-align: center;
+                    padding: 5px;
+                }
+                > h2 {
+                    color: rgb(206, 206, 236);
+                    font-size: 50px;
+                }
+                > p {
+                    margin-bottom: 0;
+                    font-size: 20px;
+                    color: $text;
+                }
+            }
+            > * {
+                @extend .bt;
+            }
+        }
+    }
+    .row3-inner {
+        > div:not(:nth-last-of-type(1)) {
+            position: relative;
+            @extend .bt,.df;
+            justify-content: center;
+            &::before {
+                content: "";
+                display: block;
+                height: 100%;
+                width: 3px;
+                background: #d9dae7;
+                left: 5%;
+                border-radius: 35%;
+                position: absolute;
+            }
+        }
+
+    }
+
+                .box {
+                border-radius: 5px;
+                background-color: rgb(255, 255, 255);
+                min-height:200px;
+                @extend .df;
+                justify-content: flex-start;
+                align-items: normal;
+                width: 80%;
+                padding: 15px;
+                    margin: 10px 0;
+                > i {
+                    min-height:150px;
+                    display: flex;
+                    justify-content: center;
+                    width: 20%;
+                    font-size: 2rem;
+                    padding-top: 5px;
+                    color: $yellow;
+                }
+
+                > section {
+                    width: 80%;
+                    height: 100%;
+                    @extend .df;
+                    justify-content: flex-start;
+                    align-content: flex-start;
+                    
+                    > h3 {
+                        margin-bottom: 0;
+                        font-size: 1.4rem;
+                        text-align: left;
+                        width: 100%;
+                    }
+                    > p {
+                        text-align: left;
+                        &:nth-of-type(1) {
+                            color: $text;
+                            margin: 5px 0;
+                            font-size: 1.3em;
+                        }
+                        &:nth-of-type(2) {
+                            font-size: 1em;
+                        }
+                    }
+                }
+
+                > * {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
 }
