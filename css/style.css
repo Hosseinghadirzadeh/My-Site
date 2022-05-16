@@ -22,11 +22,11 @@ li {
 
 .bt, header,
 main,
-footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu, .mobileMenu ul, .mobileMenu ul > li, main .row1 > div > div > section:nth-of-type(1) .coder, main .row1 .moving, .row2 > div > div > ul > li, .row2 > div > div > ul > li > section > *, .row2 > div > div > ul > li > *, .row2 > div > div > *, .row3 > div div > section > *, .row3 > div div > *, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row4, .row4 .row4-inner, .row4 .row4-inner > h3, .row5, .row5 .rowtitle, .row5 .rowtitle > *, .row5 .row5-inner section, .row5 .row5-inner section > div {
+footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu, .mobileMenu ul, .mobileMenu ul > li, main .row1 > div > div > section:nth-of-type(1) .coder, main .row1 .moving, .row2 > div > div > ul > li, .row2 > div > div > ul > li > section > *, .row2 > div > div > ul > li > *, .row2 > div > div > *, .row3 > div div > section > *, .row3 > div div > *, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row4, .row4 .row4-inner, .row4 .row4-inner > h3, .row5, .row5 .rowtitle, .row5 .rowtitle > *, .row5 .row5-inner section, .row5 .row5-inner section > div, footer .footer-inner > *, footer .footer-inner > div > * {
   border: 1px solid red;
 }
 
-.df, main .row1 .moving, .row2 > div > div > div:nth-of-type(1), .row2 > div > div > div:nth-of-type(1) > figure, .row2 > div > div > div:nth-of-type(2), .row2 > div > div > ul, .row2 > div > div > ul > li > section, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row3 .box, .row3 .box > section, .row3-inner > div:nth-of-type(3), .row3-inner > div:nth-of-type(3) > div .progress-box, .row4 .row4-inner > div {
+.df, main .row1 .moving, .row2 > div > div > div:nth-of-type(1), .row2 > div > div > div:nth-of-type(1) > figure, .row2 > div > div > div:nth-of-type(2), .row2 > div > div > ul, .row2 > div > div > ul > li > section, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row3 .box, .row3 .box > section, .row3-inner > div:nth-of-type(3), .row3-inner > div:nth-of-type(3) > div .progress-box, .row4 .row4-inner > div, footer .footer-inner > form, footer .footer-inner > div, footer .footer-inner > div > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,7 +268,7 @@ header > nav > ul > li > a > i {
 }
 
 main {
-  height: 600vh;
+  min-height: 600vh;
   background-image: linear-gradient(45deg, red, blue);
 }
 
@@ -962,6 +962,7 @@ main .row1 .moving > i:nth-of-type(1) {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   opacity: 0;
+  border-radius: 10px;
 }
 
 .row5 .row5-inner section > div::after {
@@ -976,6 +977,7 @@ main .row1 .moving > i:nth-of-type(1) {
   opacity: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  border-radius: 10px;
 }
 
 .row5 .row5-inner section > div img {
@@ -1016,5 +1018,128 @@ main .row1 .moving > i:nth-of-type(1) {
 
 .row5 .row5-inner section > div:hover::before, .row5 .row5-inner section > div:hover::after {
   opacity: 1;
+}
+
+footer {
+  background-color: #f9ca21;
+  min-height: 100vh;
+}
+
+footer .rowtitle {
+  padding: 40px 0 0 0;
+}
+
+footer .rowtitle > h2 {
+  color: #f8e399;
+  font-size: 45px;
+  text-align: center;
+}
+
+footer .rowtitle > p {
+  color: #14102d;
+  font-size: 30px;
+  text-align: center;
+}
+
+footer .footer-inner > form {
+  padding: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer-inner > form > input,
+footer .footer-inner > form textarea {
+  padding: 10px;
+  border: none;
+  border-bottom: 3px solid #14102d;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+footer .footer-inner > form > input::-webkit-input-placeholder,
+footer .footer-inner > form textarea::-webkit-input-placeholder {
+  color: #787781;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+footer .footer-inner > form > input:-ms-input-placeholder,
+footer .footer-inner > form textarea:-ms-input-placeholder {
+  color: #787781;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+footer .footer-inner > form > input::-ms-input-placeholder,
+footer .footer-inner > form textarea::-ms-input-placeholder {
+  color: #787781;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+footer .footer-inner > form > input::placeholder,
+footer .footer-inner > form textarea::placeholder {
+  color: #787781;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+footer .footer-inner > form > button {
+  background-color: #151931;
+  color: white;
+  margin-top: 10px;
+}
+
+footer .footer-inner > section > ul li {
+  font-size: 20px;
+  padding: 10px;
+}
+
+footer .footer-inner > section > ul li > i {
+  color: #14102d;
+  margin-right: 10px;
+}
+
+footer .footer-inner > div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+footer .footer-inner > div > * {
+  min-height: 30px;
+  margin-bottom: 0;
+}
+
+footer .footer-inner > div > p {
+  font-size: 20px;
+  color: #14102d;
+  font-family: "Lobster", cursive;
+}
+
+footer .footer-inner > div > ul > li > a > i {
+  font-size: 30px;
+  padding: 5px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+footer .footer-inner > div > ul > li {
+  border-radius: 50px;
+  background-color: #ecbf1b;
+  margin: 0 5px;
+}
+
+footer .footer-inner > div > ul > li:hover {
+  background-color: #151931;
+}
+
+footer .footer-inner > div > ul > li:hover > a > i {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
