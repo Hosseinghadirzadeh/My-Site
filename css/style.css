@@ -22,7 +22,7 @@ li {
 
 .bt, header,
 main,
-footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu, .mobileMenu ul, .mobileMenu ul > li, main .row1 > div > div > section:nth-of-type(1) .coder, main .row1 .moving, .row2 > div > div > ul > li, .row2 > div > div > ul > li > section > *, .row2 > div > div > ul > li > *, .row2 > div > div > *, .row3 > div div > section > *, .row3 > div div > *, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row4, .row4 .row4-inner, .row4 .row4-inner > h3 {
+footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu, .mobileMenu ul, .mobileMenu ul > li, main .row1 > div > div > section:nth-of-type(1) .coder, main .row1 .moving, .row2 > div > div > ul > li, .row2 > div > div > ul > li > section > *, .row2 > div > div > ul > li > *, .row2 > div > div > *, .row3 > div div > section > *, .row3 > div div > *, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row4, .row4 .row4-inner, .row4 .row4-inner > h3, .row5, .row5 .rowtitle, .row5 .rowtitle > *, .row5 .row5-inner section, .row5 .row5-inner section > div {
   border: 1px solid red;
 }
 
@@ -45,13 +45,13 @@ footer, header .logo, header .logo > figure, header > nav > ul, header > nav > u
 }
 
 * ::-moz-selection {
-  background: #f9ca21;
-  color: #151931;
+  background: #565656;
+  color: white;
 }
 
 * ::selection {
-  background: #f9ca21;
-  color: #151931;
+  background: #565656;
+  color: white;
 }
 
 header {
@@ -910,5 +910,111 @@ main .row1 .moving > i:nth-of-type(1) {
 
 .row4 .row4-inner > div > button > a {
   color: #f9ca21;
+}
+
+.row5 {
+  width: 100%;
+  min-height: 500px;
+  background-color: #f7f7f7;
+}
+
+.row5 .rowtitle {
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.row5 .rowtitle > h2 {
+  color: #ceceec;
+  font-size: 45px;
+}
+
+.row5 .rowtitle > p {
+  margin-bottom: 0;
+  font-size: 30px;
+  color: #46435e;
+}
+
+.row5 .row5-inner section {
+  min-height: 900px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[15];
+      grid-template-rows: repeat(15, 1fr);
+  padding: 10px 40px 60px;
+  gap: 20px;
+}
+
+.row5 .row5-inner section > div {
+  border-radius: 10px;
+  position: relative;
+}
+
+.row5 .row5-inner section > div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.721);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+.row5 .row5-inner section > div::after {
+  content: "My Practices and Projects";
+  display: block;
+  position: absolute;
+  color: #f9ca21;
+  font-size: 1.2rem;
+  top: 50%;
+  left: 10%;
+  font-family: "Lobster", cursive;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.row5 .row5-inner section > div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.row5 .row5-inner section > div:nth-of-type(1) {
+  grid-area: 1 / 1 / 8 span/1 span;
+}
+
+.row5 .row5-inner section > div:nth-of-type(2) {
+  grid-area: 1 / 2 / 10 span/1 span;
+}
+
+.row5 .row5-inner section > div:nth-of-type(3) {
+  grid-area: 1 / 3 / 6 span/1 span;
+}
+
+.row5 .row5-inner section > div:nth-of-type(4) {
+  grid-area: 9 / 1 / 6 span/1 span;
+}
+
+.row5 .row5-inner section > div:nth-of-type(5) {
+  grid-area: 11 / 2 / 6 span/1 span;
+}
+
+.row5 .row5-inner section > div:nth-of-type(6) {
+  grid-area: 7 / 3 / 9 span/1 span;
+}
+
+.row5 .row5-inner section > div:hover {
+  cursor: pointer;
+}
+
+.row5 .row5-inner section > div:hover::before, .row5 .row5-inner section > div:hover::after {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
