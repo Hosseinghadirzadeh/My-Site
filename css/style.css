@@ -66,6 +66,7 @@ header {
 
 header .logo {
   height: 35%;
+  font-family: "Lobster", cursive;
 }
 
 header .logo > figure {
@@ -1125,8 +1126,8 @@ footer .footer-inner > div > p {
 footer .footer-inner > div > ul > li > a > i {
   font-size: 30px;
   padding: 5px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 footer .footer-inner > div > ul > li {
@@ -1141,5 +1142,21 @@ footer .footer-inner > div > ul > li:hover {
 
 footer .footer-inner > div > ul > li:hover > a > i {
   color: white;
+}
+
+#chart > li {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#chart > li:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-box-shadow: 0 0 15px #f9ca21;
+          box-shadow: 0 0 15px #f9ca21;
+}
+
+#bio {
+  font-family: 'Lobster', cursive;
 }
 /*# sourceMappingURL=style.css.map */

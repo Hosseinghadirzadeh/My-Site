@@ -57,7 +57,7 @@ header {
     .logo {
         @extend .bt;
         height: 35%;
-
+        font-family: "Lobster", cursive;
         > figure {
             height: 80%;
             @extend .bt;
@@ -921,13 +921,13 @@ footer {
                 > li > a > i {
                     font-size: 30px;
                     padding: 5px;
-                    transition: all .4s;
+                    transition: all 0.4s;
                 }
                 > li {
                     border-radius: 50px;
                     background-color: #ecbf1b;
                     margin: 0 5px;
-                    
+
                     &:hover {
                         background-color: $blue;
                         > a > i {
@@ -938,4 +938,17 @@ footer {
             }
         }
     }
+}
+#chart {
+    > li {
+        transition: all 0.4s;
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 15px $yellow;
+        }
+    }
+}
+
+#bio{
+    font-family: 'Lobster', cursive;
 }
