@@ -20,7 +20,7 @@ body {
 li {
     list-style-type: none;
 }
-$flag: 1;
+$flag: 11;
 .bt {
     @if ($flag==1) {
         border: 1px solid red;

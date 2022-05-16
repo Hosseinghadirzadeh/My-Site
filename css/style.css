@@ -23,7 +23,7 @@ li {
 .bt, header,
 main,
 footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu, .mobileMenu ul, .mobileMenu ul > li, main .row1 > div > div > section:nth-of-type(1) .coder, main .row1 .moving, .row2 > div > div > ul > li, .row2 > div > div > ul > li > section > *, .row2 > div > div > ul > li > *, .row2 > div > div > *, .row3 > div div > section > *, .row3 > div div > *, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row4, .row4 .row4-inner, .row4 .row4-inner > h3, .row5, .row5 .rowtitle, .row5 .rowtitle > *, .row5 .row5-inner section, .row5 .row5-inner section > div, footer .footer-inner > *, footer .footer-inner > div > * {
-  border: 1px solid red;
+  border: none;
 }
 
 .df, main .row1 .moving, .row2 > div > div > div:nth-of-type(1), .row2 > div > div > div:nth-of-type(1) > figure, .row2 > div > div > div:nth-of-type(2), .row2 > div > div > ul, .row2 > div > div > ul > li > section, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row3 .box, .row3 .box > section, .row3-inner > div:nth-of-type(3), .row3-inner > div:nth-of-type(3) > div .progress-box, .row4 .row4-inner > div, footer .footer-inner > form, footer .footer-inner > div, footer .footer-inner > div > ul {
