@@ -42,7 +42,12 @@ main,
 footer {
     @extend .bt;
 }
-
+*{
+    ::selection {
+        background:$yellow ;
+        color: $blue;
+    }
+}
 header {
     height: 100vh;
     position: sticky;
@@ -701,4 +706,38 @@ main {
     justify-content: center;
     align-items: center;
     padding: 40px 0;
+}
+// ****************************row4**************************************
+
+.row4 {
+    min-height: 355px;
+    @extend .bt;
+    background-image: url(../img/hire-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 -30px;
+    .row4-inner {
+        min-height: 355px;
+        @extend .bt;
+        justify-content: center;
+        align-content: center;
+        > h3 {
+            @extend .bt;
+            color: white;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        > div {
+            @extend .df;
+            padding: 20px;
+            > button {
+                background-color: transparent;
+                border: 2px solid $yellow;
+                > a {
+                    color: $yellow;
+                }
+            }
+        }
+    }
 }

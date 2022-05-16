@@ -22,11 +22,11 @@ li {
 
 .bt, header,
 main,
-footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu, .mobileMenu ul, .mobileMenu ul > li, main .row1 > div > div > section:nth-of-type(1) .coder, main .row1 .moving, .row2 > div > div > ul > li, .row2 > div > div > ul > li > section > *, .row2 > div > div > ul > li > *, .row2 > div > div > *, .row3 > div div > section > *, .row3 > div div > *, .row3 .row3-inner > div:not(:nth-last-of-type(1)) {
+footer, header .logo, header .logo > figure, header > nav > ul, header > nav > ul > li, .mobileMenu, .mobileMenu ul, .mobileMenu ul > li, main .row1 > div > div > section:nth-of-type(1) .coder, main .row1 .moving, .row2 > div > div > ul > li, .row2 > div > div > ul > li > section > *, .row2 > div > div > ul > li > *, .row2 > div > div > *, .row3 > div div > section > *, .row3 > div div > *, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row4, .row4 .row4-inner, .row4 .row4-inner > h3 {
   border: 1px solid red;
 }
 
-.df, main .row1 .moving, .row2 > div > div > div:nth-of-type(1), .row2 > div > div > div:nth-of-type(1) > figure, .row2 > div > div > div:nth-of-type(2), .row2 > div > div > ul, .row2 > div > div > ul > li > section, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row3 .box, .row3 .box > section, .row3-inner > div:nth-of-type(3), .row3-inner > div:nth-of-type(3) > div .progress-box {
+.df, main .row1 .moving, .row2 > div > div > div:nth-of-type(1), .row2 > div > div > div:nth-of-type(1) > figure, .row2 > div > div > div:nth-of-type(2), .row2 > div > div > ul, .row2 > div > div > ul > li > section, .row3 .row3-inner > div:not(:nth-last-of-type(1)), .row3 .box, .row3 .box > section, .row3-inner > div:nth-of-type(3), .row3-inner > div:nth-of-type(3) > div .progress-box, .row4 .row4-inner > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +42,16 @@ footer, header .logo, header .logo > figure, header > nav > ul, header > nav > u
 
 .font {
   font-family: "Roboto", sans-serif;
+}
+
+* ::-moz-selection {
+  background: #f9ca21;
+  color: #151931;
+}
+
+* ::selection {
+  background: #f9ca21;
+  color: #151931;
 }
 
 header {
@@ -863,5 +873,42 @@ main .row1 .moving > i:nth-of-type(1) {
       -ms-flex-align: center;
           align-items: center;
   padding: 40px 0;
+}
+
+.row4 {
+  min-height: 355px;
+  background-image: url(../img/hire-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 -30px;
+}
+
+.row4 .row4-inner {
+  min-height: 355px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.row4 .row4-inner > h3 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.row4 .row4-inner > div {
+  padding: 20px;
+}
+
+.row4 .row4-inner > div > button {
+  background-color: transparent;
+  border: 2px solid #f9ca21;
+}
+
+.row4 .row4-inner > div > button > a {
+  color: #f9ca21;
 }
 /*# sourceMappingURL=style.css.map */
