@@ -824,26 +824,32 @@ main .row1 .moving > i:nth-of-type(1) {
 
 #pbar > div:nth-of-type(1) > div:nth-of-type(1) > div::before {
   width: 95%;
+  border-radius: 30px;
 }
 
 #pbar > div:nth-of-type(1) > div:nth-of-type(2) > div::before {
   width: 90%;
+  border-radius: 30px;
 }
 
 #pbar > div:nth-of-type(1) > div:nth-of-type(3) > div::before {
   width: 10%;
+  border-radius: 30px;
 }
 
 #pbar > div:nth-of-type(2) > div:nth-of-type(1) > div::before {
   width: 95%;
+  border-radius: 30px;
 }
 
 #pbar > div:nth-of-type(2) > div:nth-of-type(2) > div::before {
   width: 85%;
+  border-radius: 30px;
 }
 
 #pbar > div:nth-of-type(2) > div:nth-of-type(3) > div::before {
   width: 95%;
+  border-radius: 30px;
 }
 
 .btn1 {
@@ -1096,7 +1102,7 @@ footer .footer-inner > form > button {
 }
 
 footer .footer-inner > section > ul li {
-  font-size: 20px;
+  font-size: 1.3rem;
   padding: 10px;
 }
 
@@ -1124,7 +1130,7 @@ footer .footer-inner > div > p {
 }
 
 footer .footer-inner > div > ul > li > a > i {
-  font-size: 30px;
+  font-size: 1.4rem;
   padding: 5px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -1157,6 +1163,6 @@ footer .footer-inner > div > ul > li:hover > a > i {
 }
 
 #bio {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
 }
 /*# sourceMappingURL=style.css.map */
